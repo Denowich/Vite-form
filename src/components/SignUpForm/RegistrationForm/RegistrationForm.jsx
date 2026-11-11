@@ -1,6 +1,6 @@
 import { Stack, TextField, Button, Typography } from '@mui/material';
 
-export const RegistrationForm = () => {
+export const RegistrationForm = (props) => {
   return (
     <div>
       <Stack
@@ -20,7 +20,9 @@ export const RegistrationForm = () => {
 
           <TextField id='login' label='Login' variant='standard'></TextField>
           <TextField id='password' label='Password' variant='standard' type='password'></TextField>
-          <Button variant='contained'>Зарегистрироваться</Button>
+          <Button variant='contained' onClick={props.handleRegisterClick}>
+            Зарегистрироваться
+          </Button>
         </Stack>
       </Stack>
     </div>
