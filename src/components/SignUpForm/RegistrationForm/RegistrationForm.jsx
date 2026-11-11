@@ -25,7 +25,6 @@ export const RegistrationForm = (props) => {
 
           <Typography variant='subtitle1' component='h1'>
             Есть учётка?
-            {data}
             <Button variant='contained' onClick={props.handleEnterClick}>
               Войти
             </Button>
