@@ -15,14 +15,14 @@ export const RegistrationForm = (props) => {
 
           <Typography variant='subtitle1' component='h1'>
             Есть учётка?
-            <Button variant='contained'>Войти</Button>
+            <Button variant='contained' onClick={props.handleEnterClick}>
+              Войти
+            </Button>
           </Typography>
 
           <TextField id='login' label='Login' variant='standard'></TextField>
           <TextField id='password' label='Password' variant='standard' type='password'></TextField>
-          <Button variant='contained' onClick={props.handleRegisterClick}>
-            Зарегистрироваться
-          </Button>
+          <Button variant='contained'>Зарегистрироваться</Button>
         </Stack>
       </Stack>
     </div>
