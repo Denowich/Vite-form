@@ -6,16 +6,16 @@ export const SignUpForm = () => {
   const [isLogin, setIsLogin] = useState(true);
 
   const handleEnterClick = () => {
-    setIsLogin(false);
+    setIsLogin(true);
   };
 
   const handleRegisterClick = () => {
-    setIsLogin(true);
+    setIsLogin(false);
   };
 
   return (
     <div>
-      {isLogin ? <LoginForm handleEnterClick={handleEnterClick} /> : <RegistrationForm handleRegisterClick={handleRegisterClick} />}
+      {isLogin ? <LoginForm handleRegisterClick={handleRegisterClick} /> : <RegistrationForm handleEnterClick={handleEnterClick} />}
     </div>
   );
 };
