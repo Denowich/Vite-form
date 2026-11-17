@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { RegistrationForm } from './RegistrationForm/RegistrationForm';
 import { LoginForm } from './LoginForm/LoginForm';
 
-export const SignUpForm = () => {
+export const SignUpForm = (props) => {
   const [isLogin, setIsLogin] = useState(true);
 
   const handleEnterClick = () => {
@@ -15,7 +15,11 @@ export const SignUpForm = () => {
 
   return (
     <div>
-      {isLogin ? <LoginForm handleRegisterClick={handleRegisterClick} /> : <RegistrationForm handleEnterClick={handleEnterClick} />}
+      {isLogin ? (
+        <LoginForm handleRegisterClick={handleRegisterClick} setUser={props.setUser} />
+      ) : (
+        <RegistrationForm handleEnterClick={handleEnterClick} />
+      )}
     </div>
   );
 };

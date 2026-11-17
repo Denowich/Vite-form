@@ -12,6 +12,15 @@ export const LoginForm = (props) => {
     setPass(e.target.value);
   };
 
+  const handleLoginClick = () => {
+    if (data == 'admin' && pass == '123') {
+      // props.setUser({ name: 'Hello Admin!' });
+      props.setUser({ name: data });
+    } else {
+      alert('Unknow user');
+    }
+  };
+
   return (
     <div>
       <Stack
@@ -40,7 +49,9 @@ export const LoginForm = (props) => {
             onChange={handlePasswordChange}
             value={pass}
           ></TextField>
-          <Button variant='contained'>Войти</Button>
+          <Button variant='contained' onClick={handleLoginClick}>
+            Войти
+          </Button>
         </Stack>
       </Stack>
     </div>
