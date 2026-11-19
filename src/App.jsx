@@ -1,6 +1,6 @@
-import { useState } from 'react';
 import './App.css';
 import { SignUpForm } from './components/SignUpForm/SignUpForm';
+import { useState } from 'react';
 
 function App() {
   const [user, setUser] = useState();
